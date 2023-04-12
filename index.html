@@ -1,25 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>React Learning</title>
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
-  <script
-    crossorigin
-    src="https://unpkg.com/react@18/umd/react.development.js"
-  ></script>
-  <script
-    crossorigin
-    src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
-  ></script>
-  <script>
-    const heading = React.createElement('h1', {}, 'Namaste Everyone');
+</head>
+
+<body>
+    <div id="header">
+        <h1>Heading</h1>
+    </div>
+    <div id="root">Not Rendered</div>
+    <div id="footer">
+        <h1>Footer<h1>
+    </div>
+</body>
+
+<script>
+    const heading = React.createElement('h2', {
+        style: { border: 'solid 1px red', position: 'relative' }
+    }, 'Namaste Everyone');
     const root = ReactDOM.createRoot(document.getElementById('root'));
     root.render(heading);
-  </script>
+</script>
+
 </html>
